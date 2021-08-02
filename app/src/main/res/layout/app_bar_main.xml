@@ -3,8 +3,12 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/burj_khalifa">
-    <include layout="@layout/tool_bar"></include>
+    android:background="@drawable/yazisoft">
+
+    <include
+        layout="@layout/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"></include>
 
     <FrameLayout
         android:layout_width="match_parent"
