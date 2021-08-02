@@ -251,7 +251,7 @@ public class MainFragment extends Fragment implements View.OnClickListener, Chan
             case "CONNECTED":
                 vpnStart = true;// it will use after restart this activity
                 status("connected");
-                binding.logTv.setText("");
+                binding.logTv.setText("Connected!!");
                 break;
             case "WAIT":
                 binding.logTv.setText("waiting for server connection!!");
@@ -324,7 +324,7 @@ public class MainFragment extends Fragment implements View.OnClickListener, Chan
                 if (lastPacketReceive == null) lastPacketReceive = "0";
                 if (byteIn == null) byteIn = " ";
                 if (byteOut == null) byteOut = " ";
-                updateConnectionStatus(duration, lastPacketReceive, byteIn, byteOut);
+//                updateConnectionStatus(duration, lastPacketReceive, byteIn, byteOut);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -339,12 +339,12 @@ public class MainFragment extends Fragment implements View.OnClickListener, Chan
      * @param byteIn: incoming data
      * @param byteOut: outgoing data
      */
-    public void updateConnectionStatus(String duration, String lastPacketReceive, String byteIn, String byteOut) {
-        binding.durationTv.setText("Duration: " + duration);
-        binding.lastPacketReceiveTv.setText("Packet Received: " + lastPacketReceive + " second ago");
-        binding.byteInTv.setText("Bytes In: " + byteIn);
-        binding.byteOutTv.setText("Bytes Out: " + byteOut);
-    }
+//    public void updateConnectionStatus(String duration, String lastPacketReceive, String byteIn, String byteOut) {
+//        binding.durationTv.setText("Duration: " + duration);
+//        binding.lastPacketReceiveTv.setText("Packet Received: " + lastPacketReceive + " second ago");
+//        binding.byteInTv.setText("Bytes In: " + byteIn);
+//        binding.byteOutTv.setText("Bytes Out: " + byteOut);
+//    }
 
     /**
      * Show toast message

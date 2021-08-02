@@ -7,87 +7,77 @@
         android:paddingLeft="10dp"
         android:paddingBottom="5dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/connectionStatus">
+        <!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_above="@+id/connectionStatus">-->
 
-            <TextView
-                android:id="@+id/logTv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:gravity="center"
-                android:textColor="@color/colorWhite" />
-        </LinearLayout>
+<!--            <TextView-->
+<!--                android:id="@+id/logTv"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="20dp"-->
+<!--                android:gravity="center"-->
+<!--                android:textColor="@color/colorWhite" />-->
+<!--        </LinearLayout>-->
 
-        <LinearLayout
-            android:layout_marginLeft="20dp"
-            android:id="@+id/connectionStatus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:orientation="vertical"
-            android:layout_marginStart="20dp">
+<!--        <LinearLayout-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:id="@+id/connectionStatus"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_marginStart="20dp">-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="Connection Status"
-                android:textColor="@color/colorWhite"
-                android:textSize="15sp"
-                android:textStyle="bold" />
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:text="Connection Status"-->
+<!--                android:textColor="@color/colorWhite"-->
+<!--                android:textSize="15sp"-->
+<!--                android:textStyle="bold" />-->
 
-            <TextView
-                android:id="@+id/durationTv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="Duration: 00:00:00"
-                android:textColor="@color/colorWhite"
-                android:textSize="14sp" />
+<!--            <TextView-->
+<!--                android:id="@+id/durationTv"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:text="Duration: 00:00:00"-->
+<!--                android:textColor="@color/colorWhite"-->
+<!--                android:textSize="14sp" />-->
 
-            <TextView
-                android:id="@+id/lastPacketReceiveTv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="Packet Received:"
-                android:textColor="@color/colorWhite"
-                android:textSize="14sp" />
+<!--            <TextView-->
+<!--                android:id="@+id/lastPacketReceiveTv"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:text="Packet Received:"-->
+<!--                android:textColor="@color/colorWhite"-->
+<!--                android:textSize="14sp" />-->
 
-            <TextView
-                android:id="@+id/byteInTv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="Bytes In: "
-                android:textColor="@color/colorWhite"
-                android:textSize="14sp" />
+<!--            <TextView-->
+<!--                android:id="@+id/byteInTv"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:text="Bytes In: "-->
+<!--                android:textColor="@color/colorWhite"-->
+<!--                android:textSize="14sp" />-->
 
-            <TextView
-                android:id="@+id/byteOutTv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="Bytes OUT: "
-                android:textColor="@color/colorWhite"
-                android:textSize="14sp" />
+<!--            <TextView-->
+<!--                android:id="@+id/byteOutTv"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:text="Bytes OUT: "-->
+<!--                android:textColor="@color/colorWhite"-->
+<!--                android:textSize="14sp" />-->
 
-            <Button
-                android:id="@+id/vpnBtn"
-                android:layout_width="150dp"
-                android:layout_height="35dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="30dp"
-                android:background="@drawable/button"
-                android:tag="1"
-                android:text="Connect"
-                android:textColor="@color/colorWhite"
-                android:textSize="16sp" />
-        </LinearLayout>
+<!--            -->
+<!--        </LinearLayout>-->
+
         <ImageView
             android:layout_marginBottom="20dp"
             android:layout_centerHorizontal="true"
@@ -96,5 +86,39 @@
             android:layout_height="55dp"
             android:id="@+id/selectedServerIcon"
             android:src="@drawable/usa_flag"/>
+
+
+        <Button
+            android:id="@+id/vpnBtn"
+
+            android:layout_width="231dp"
+            android:layout_height="224dp"
+            android:layout_alignParentStart="true"
+
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="88dp"
+            android:layout_marginLeft="88dp"
+            android:layout_marginBottom="261dp"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:text="Connect"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/logTv"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="88dp"
+            android:text="                  "
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textAlignment="center"/>
     </RelativeLayout>
 </layout>
