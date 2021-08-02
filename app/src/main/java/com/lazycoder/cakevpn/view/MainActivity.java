@@ -10,8 +10,10 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.lazycoder.cakevpn.R;
@@ -145,4 +147,5 @@ public class MainActivity extends AppCompatActivity implements NavItemClickListe
         closeDrawer();
         changeServer.newServer(serverLists.get(index));
     }
+
 }

@@ -82,23 +82,23 @@
         <Button
             android:id="@+id/vpnBtn"
 
-            android:layout_width="213dp"
-            android:layout_height="210dp"
+            android:layout_width="215dp"
+            android:layout_height="215dp"
             android:layout_below="@+id/logTv"
 
-            android:layout_centerInParent="true"
             android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
             android:layout_marginStart="82dp"
             android:layout_marginLeft="82dp"
             android:layout_marginTop="59dp"
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/buttonbackgroundcolors"
             android:shadowColor="#A8A8A8"
             android:shadowDx="0"
             android:shadowDy="0"
             android:shadowRadius="5"
             android:text="Connect"
-            android:textColor="#FFFFFF"
-            android:textSize="30sp" />
+            android:textColor="#121111"
+            android:textSize="28sp" />
 
         <TextView
             android:id="@+id/logTv"
