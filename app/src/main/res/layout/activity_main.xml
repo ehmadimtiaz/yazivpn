@@ -11,6 +11,7 @@
     tools:context=".view.MainActivity"
     tools:openDrawer="start">
 
+
     <include
         layout="@layout/app_bar_main"
         android:layout_width="match_parent"
@@ -26,5 +27,11 @@
         <include layout="@layout/layout_right_navigation" />
 
     </com.google.android.material.navigation.NavigationView>
+
+    <include
+        layout="@layout/bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 
 </androidx.drawerlayout.widget.DrawerLayout>
