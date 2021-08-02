@@ -1,2 +1,2 @@
-#YaziVPN
+# YaziVPN
 Powered by YaziSoft.
