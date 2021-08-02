@@ -27,6 +27,7 @@ import java.util.ArrayList;
 import com.lazycoder.cakevpn.Utils;
 
 
+
 public class MainActivity extends AppCompatActivity implements NavItemClickListener {
     private FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
     private Fragment fragment;
