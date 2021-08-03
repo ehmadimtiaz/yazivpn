@@ -15,7 +15,7 @@
         android:text="Powered by YaziSoft. 2021 All Rights Reserved."
         android:textAlignment="center"
         android:textColor="#73C0FF"
-        android:textSize="16sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="16dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

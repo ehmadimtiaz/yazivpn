@@ -251,7 +251,7 @@ public class MainFragment extends Fragment implements View.OnClickListener, Chan
             case "CONNECTED":
                 vpnStart = true;// it will use after restart this activity
                 status("connected");
-                binding.logTv.setText("Connected!!");
+                binding.logTv.setText("Connected!!!");
                 break;
             case "WAIT":
                 binding.logTv.setText("waiting for server connection!!");
