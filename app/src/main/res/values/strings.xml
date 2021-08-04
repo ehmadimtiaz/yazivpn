@@ -11,4 +11,7 @@
     <string name="yes">YES</string>
     <string name="no">NO</string>
     <string name="empty">       </string>
+    <string name="bottomBarText">
+        <a href="https://yazisoft.com/">Powered by YaziSoft.</a>
+    </string>
 </resources>

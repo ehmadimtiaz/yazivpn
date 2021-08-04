@@ -12,9 +12,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.lazycoder.cakevpn.R;
 import com.lazycoder.cakevpn.adapter.ServerListRVAdapter;
@@ -73,6 +75,10 @@ public class MainActivity extends AppCompatActivity implements NavItemClickListe
             serverListRVAdapter = new ServerListRVAdapter(serverLists, this);
             serverListRv.setAdapter(serverListRVAdapter);
         }
+
+
+        TextView text = (TextView) findViewById(R.id.textView);
+        text.setMovementMethod(LinkMovementMethod.getInstance());
 
     }
 

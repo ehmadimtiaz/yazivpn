@@ -12,10 +12,10 @@
         android:layout_height="50dp"
         android:background="#000000"
         android:gravity="center"
-        android:text="Powered by YaziSoft. 2021 All Rights Reserved."
+        android:text="@string/bottomBarText"
         android:textAlignment="center"
         android:textColor="#73C0FF"
-        android:textSize="14sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="16dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
