@@ -12,7 +12,6 @@
         android:layout_height="50dp"
         android:background="#000000"
         android:gravity="center"
-        android:text="@string/bottomBarText"
         android:textAlignment="center"
         android:textColor="#73C0FF"
         android:textSize="20sp"

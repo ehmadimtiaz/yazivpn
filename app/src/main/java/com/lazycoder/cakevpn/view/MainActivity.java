@@ -12,7 +12,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.Spannable;
+import android.text.TextPaint;
 import android.text.method.LinkMovementMethod;
+import android.text.style.URLSpan;
+import android.text.style.UnderlineSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -77,8 +82,21 @@ public class MainActivity extends AppCompatActivity implements NavItemClickListe
         }
 
 
-        TextView text = (TextView) findViewById(R.id.textView);
-        text.setMovementMethod(LinkMovementMethod.getInstance());
+        TextView textView = (TextView) findViewById(R.id.textView);
+        String content = "<a href='https://yazisoft.com/'>Powered by YaziSoft.</a>";
+
+        Spannable s = (Spannable) Html.fromHtml(content);
+        for (URLSpan u: s.getSpans(0, s.length(), URLSpan.class)) {
+            s.setSpan(new UnderlineSpan() {
+                public void updateDrawState(TextPaint tp) {
+                    tp.setUnderlineText(false);
+                }
+            }, s.getSpanStart(u), s.getSpanEnd(u), 0);
+        }
+        textView.setText(s);
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
+        textView.setLinkTextColor(Color.parseColor("#FFFFFF"));
+
 
     }
 
