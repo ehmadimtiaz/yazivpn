@@ -82,6 +82,7 @@ public class MainActivity extends AppCompatActivity implements NavItemClickListe
         }
 
 
+        // Linked Text (Powered by YaziSoft).
         TextView textView = (TextView) findViewById(R.id.textView);
         String content = "<a href='https://yazisoft.com/'>Powered by YaziSoft.</a>";
 
