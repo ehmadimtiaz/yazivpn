@@ -79,6 +79,17 @@
 <!--            -->
 <!--        </LinearLayout>-->
 
+        <TextView
+            android:id="@+id/logTv"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="88dp"
+            android:text="@string/empty"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textAlignment="center"/>
 
         <Button
             android:id="@+id/vpnBtn"
@@ -95,17 +106,7 @@
             android:textColor="#121111"
             android:textSize="28sp" />
 
-        <TextView
-            android:id="@+id/logTv"
-            android:layout_width="match_parent"
-            android:layout_height="63dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="88dp"
-            android:text="@string/empty"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:textAlignment="center"/>
+
 
     </RelativeLayout>
 </layout>
