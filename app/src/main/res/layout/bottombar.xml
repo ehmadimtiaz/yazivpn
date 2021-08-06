@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="#000000"
+        android:fontFamily="@font/montserrat"
         android:gravity="center"
         android:textAlignment="center"
         android:textColor="#73C0FF"
