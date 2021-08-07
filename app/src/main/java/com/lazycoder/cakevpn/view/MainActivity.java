@@ -9,9 +9,11 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Html;
 import android.text.Spannable;
 import android.text.TextPaint;
@@ -30,6 +32,7 @@ import com.lazycoder.cakevpn.interfaces.NavItemClickListener;
 import com.lazycoder.cakevpn.model.Server;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.lazycoder.cakevpn.Utils;
 
@@ -44,11 +47,37 @@ public class MainActivity extends AppCompatActivity implements NavItemClickListe
     private DrawerLayout drawer;
     private ChangeServer changeServer;
 
+    private ViewPager2 viewPager2;
+    private Handler sliderHandler = new Handler();
+
     public static final String TAG = "CakeVPN";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
+        viewPager2 = findViewById(R.id.viewPagerImageSlider);
+
+        List<SliderItem> sliderItems = new ArrayList<>();
+        sliderItems.add(new SliderItem(R.drawable.burj_khalifa));
+        sliderItems.add(new SliderItem(R.drawable.yazisoft));
+        sliderItems.add(new SliderItem(R.drawable.yazisoft2));
+
+        viewPager2.setAdapter(new SliderAdapter(sliderItems, viewPager2));
+
+
+        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                sliderHandler.removeCallbacks(sliderRunnable);
+                sliderHandler.postDelayed(sliderRunnable,5000);
+            }
+        });
+
+
 
         // Initialize all variable
         initializeAll();
@@ -172,6 +201,25 @@ public class MainActivity extends AppCompatActivity implements NavItemClickListe
     public void clickedItem(int index) {
         closeDrawer();
         changeServer.newServer(serverLists.get(index));
+    }
+
+    private Runnable sliderRunnable = new Runnable() {
+        @Override
+        public void run() {
+            viewPager2.setCurrentItem(viewPager2.getCurrentItem() + 1);
+        }
+    };
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        sliderHandler.removeCallbacks(sliderRunnable);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        sliderHandler.postDelayed(sliderRunnable, 5000);
     }
 
 }
