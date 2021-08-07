@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Color;
 import android.net.VpnService;
 import android.os.Bundle;
 import android.os.RemoteException;
@@ -278,24 +279,28 @@ public class MainFragment extends Fragment implements View.OnClickListener, Chan
 
         if (status.equals("connect")) {
             binding.vpnBtn.setText(getContext().getString(R.string.connect));
+            binding.vpnBtn.setSelected(false);
         } else if (status.equals("connecting")) {
             binding.vpnBtn.setText(getContext().getString(R.string.connecting));
+            binding.vpnBtn.setTextSize(20);
         } else if (status.equals("connected")) {
 
             binding.vpnBtn.setText(getContext().getString(R.string.disconnect));
-
+            binding.vpnBtn.setSelected(true);
+            binding.vpnBtn.setTextSize(20);
         } else if (status.equals("tryDifferentServer")) {
-
-            binding.vpnBtn.setBackgroundResource(R.drawable.button_connected);
+            binding.vpnBtn.setTextSize(20);
             binding.vpnBtn.setText("Try Different\nServer");
+
         } else if (status.equals("loading")) {
-            binding.vpnBtn.setBackgroundResource(R.drawable.button);
+            binding.vpnBtn.setTextSize(24);
             binding.vpnBtn.setText("Loading Server..");
+            binding.vpnBtn.setTextSize(20);
         } else if (status.equals("invalidDevice")) {
-            binding.vpnBtn.setBackgroundResource(R.drawable.button_connected);
             binding.vpnBtn.setText("Invalid Device");
+            binding.vpnBtn.setTextSize(20);
         } else if (status.equals("authenticationCheck")) {
-            binding.vpnBtn.setBackgroundResource(R.drawable.button_connecting);
+            binding.vpnBtn.setTextSize(20);
             binding.vpnBtn.setText("Authentication \n Checking...");
         }
 

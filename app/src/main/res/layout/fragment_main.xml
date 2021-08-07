@@ -108,7 +108,7 @@
             android:shadowRadius="5"
             android:text="@string/connect"
             android:textColor="#121111"
-            android:textSize="28sp" />
+            android:textSize="24sp" />
 
         
 
