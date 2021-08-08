@@ -57,13 +57,13 @@ public class MainActivity extends AppCompatActivity implements NavItemClickListe
         setContentView(R.layout.activity_main);
 
 
-
+        // image slider.
         viewPager2 = findViewById(R.id.viewPagerImageSlider);
 
         List<SliderItem> sliderItems = new ArrayList<>();
-        sliderItems.add(new SliderItem(R.drawable.burj_khalifa));
-        sliderItems.add(new SliderItem(R.drawable.yazisoft));
-        sliderItems.add(new SliderItem(R.drawable.yazisoft2));
+        sliderItems.add(new SliderItem(R.drawable.medtelelogo));
+        sliderItems.add(new SliderItem(R.drawable.theraviserlogo));
+
 
         viewPager2.setAdapter(new SliderAdapter(sliderItems, viewPager2));
 

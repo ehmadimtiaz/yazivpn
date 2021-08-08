@@ -24,8 +24,8 @@
         android:layout_width="match_parent"
         android:layout_height="220dp"
         android:layout_marginBottom="35dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         tools:layout_editor_absoluteX="0dp" />
 

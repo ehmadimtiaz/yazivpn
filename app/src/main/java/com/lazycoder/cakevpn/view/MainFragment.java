@@ -282,25 +282,25 @@ public class MainFragment extends Fragment implements View.OnClickListener, Chan
             binding.vpnBtn.setSelected(false);
         } else if (status.equals("connecting")) {
             binding.vpnBtn.setText(getContext().getString(R.string.connecting));
-            binding.vpnBtn.setTextSize(20);
+            binding.vpnBtn.setTextSize(22);
         } else if (status.equals("connected")) {
 
             binding.vpnBtn.setText(getContext().getString(R.string.disconnect));
             binding.vpnBtn.setSelected(true);
-            binding.vpnBtn.setTextSize(20);
+            binding.vpnBtn.setTextSize(22);
         } else if (status.equals("tryDifferentServer")) {
-            binding.vpnBtn.setTextSize(20);
+            binding.vpnBtn.setTextSize(22);
             binding.vpnBtn.setText("Try Different\nServer");
 
         } else if (status.equals("loading")) {
             binding.vpnBtn.setTextSize(24);
             binding.vpnBtn.setText("Loading Server..");
-            binding.vpnBtn.setTextSize(20);
+            binding.vpnBtn.setTextSize(22);
         } else if (status.equals("invalidDevice")) {
             binding.vpnBtn.setText("Invalid Device");
-            binding.vpnBtn.setTextSize(20);
+            binding.vpnBtn.setTextSize(22);
         } else if (status.equals("authenticationCheck")) {
-            binding.vpnBtn.setTextSize(20);
+            binding.vpnBtn.setTextSize(22);
             binding.vpnBtn.setText("Authentication \n Checking...");
         }
 
