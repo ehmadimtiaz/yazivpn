@@ -23,11 +23,25 @@
         android:id="@+id/viewPagerImageSlider"
         android:layout_width="match_parent"
         android:layout_height="220dp"
-        android:layout_marginBottom="35dp"
+        android:layout_marginBottom="15dp"
         android:layout_marginLeft="80dp"
         android:layout_marginRight="80dp"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="@string/moreproducts"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="193dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewPagerImageSlider"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
