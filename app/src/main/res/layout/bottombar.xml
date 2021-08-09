@@ -23,7 +23,6 @@
         android:id="@+id/viewPagerImageSlider"
         android:layout_width="match_parent"
         android:layout_height="220dp"
-        android:layout_marginBottom="15dp"
         android:layout_marginLeft="80dp"
         android:layout_marginRight="80dp"
         app:layout_constraintBottom_toTopOf="@+id/textView"
@@ -39,7 +38,7 @@
         android:textAlignment="center"
         android:textSize="28sp"
         android:textStyle="bold"
-        android:layout_marginBottom="193dp"
+        android:layout_marginBottom="208dp"
         app:layout_constraintBottom_toBottomOf="@+id/viewPagerImageSlider"
         app:layout_constraintEnd_toEndOf="parent" />
 

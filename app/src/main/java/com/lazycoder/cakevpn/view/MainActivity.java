@@ -63,6 +63,8 @@ public class MainActivity extends AppCompatActivity implements NavItemClickListe
         List<SliderItem> sliderItems = new ArrayList<>();
         sliderItems.add(new SliderItem(R.drawable.medtelelogo));
         sliderItems.add(new SliderItem(R.drawable.theraviserlogo));
+        sliderItems.add(new SliderItem(R.drawable.a1stealthlogo));
+        sliderItems.add(new SliderItem(R.drawable.stupicrichlogo));
 
 
         viewPager2.setAdapter(new SliderAdapter(sliderItems, viewPager2));
