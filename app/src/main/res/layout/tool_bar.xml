@@ -2,7 +2,8 @@
 <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/toolbar"
     android:layout_width="match_parent"
-    android:layout_height="?attr/actionBarSize">
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/navbar">
 
     <TextView
         android:id="@+id/titleTv"
@@ -21,5 +22,12 @@
         android:layout_height="20dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/svpn__country_flag" />
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:background="@drawable/logo"
+
+        />
 
 </androidx.appcompat.widget.Toolbar>
