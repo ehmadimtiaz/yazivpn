@@ -21,7 +21,6 @@ import android.text.method.LinkMovementMethod;
 import android.text.style.URLSpan;
 import android.text.style.UnderlineSpan;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -167,7 +166,7 @@ public class MainActivity extends AppCompatActivity implements NavItemClickListe
 
         ArrayList<Server> servers = new ArrayList<>();
         servers.add(new Server("United States",
-                Utils.getImgURL(R.drawable.usa_flag),
+                Utils.getImgURL(R.drawable.unitedstates),
                 "us_server.ovpn"
         ));
 
