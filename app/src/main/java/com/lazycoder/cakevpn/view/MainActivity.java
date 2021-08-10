@@ -63,6 +63,8 @@ public class MainActivity extends AppCompatActivity implements NavItemClickListe
         List<SliderItem> sliderItems = new ArrayList<>();
         sliderItems.add(new SliderItem(R.drawable.medtelelogo));
         sliderItems.add(new SliderItem(R.drawable.theraviserlogo));
+        sliderItems.add(new SliderItem(R.drawable.a1stealthlogo));
+        sliderItems.add(new SliderItem(R.drawable.stupicrichlogo));
 
 
         viewPager2.setAdapter(new SliderAdapter(sliderItems, viewPager2));
@@ -164,30 +166,18 @@ public class MainActivity extends AppCompatActivity implements NavItemClickListe
     private ArrayList getServerList() {
 
         ArrayList<Server> servers = new ArrayList<>();
-
         servers.add(new Server("United States",
                 Utils.getImgURL(R.drawable.usa_flag),
-                "us.ovpn",
-                "freeopenvpn",
-                "416248023"
+                "us_server.ovpn"
         ));
-        servers.add(new Server("Japan",
-                Utils.getImgURL(R.drawable.japan),
-                "japan.ovpn",
-                "vpn",
-                "vpn"
+
+        servers.add(new Server("Germany",
+                Utils.getImgURL(R.drawable.germany),
+                "germany.ovpn"
         ));
-        servers.add(new Server("Sweden",
-                Utils.getImgURL(R.drawable.sweden),
-                "sweden.ovpn",
-                "vpn",
-                "vpn"
-        ));
-        servers.add(new Server("Korea",
-                Utils.getImgURL(R.drawable.korea),
-                "korea.ovpn",
-                "vpn",
-                "vpn"
+        servers.add(new Server("France",
+                Utils.getImgURL(R.drawable.france),
+                "frans.ovpn"
         ));
 
         return servers;

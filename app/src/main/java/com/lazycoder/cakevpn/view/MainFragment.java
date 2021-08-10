@@ -364,9 +364,7 @@ public class MainFragment extends Fragment implements View.OnClickListener, Chan
      * @param serverIcon: icon URL
      */
 //    public void updateCurrentServerIcon(String serverIcon) {
-//        Glide.with(getContext())
-//                .load(serverIcon)
-//                .into(binding.selectedServerIcon);
+//        Glide.with(getContext()).load(serverIcon).into(binding.selectedServerIcon);
 //    }
 
     /**
