@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Html;
@@ -127,6 +128,9 @@ public class MainActivity extends AppCompatActivity implements NavItemClickListe
         textView.setMovementMethod(LinkMovementMethod.getInstance());
         textView.setLinkTextColor(Color.parseColor("#FFFFFF"));
 
+        // status bar color
+        statusBarColor();
+
     }
 
     /**
@@ -222,5 +226,14 @@ public class MainActivity extends AppCompatActivity implements NavItemClickListe
         sliderHandler.postDelayed(sliderRunnable, 5000);
     }
 
+    // status bar color
+    private void statusBarColor() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            getWindow().setStatusBarColor(getResources().getColor(R.color.statusBar2, this.getTheme()));
+        }
+        else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setStatusBarColor(getResources().getColor(R.color.statusBar2));
+        }
+    }
 
 }
