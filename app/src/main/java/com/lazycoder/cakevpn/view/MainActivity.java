@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements NavItemClickListe
     private DrawerLayout drawer;
     private ChangeServer changeServer;
 
-    public static final String TAG = "CakeVPN";
+    public static final String TAG = "YaziVPN";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

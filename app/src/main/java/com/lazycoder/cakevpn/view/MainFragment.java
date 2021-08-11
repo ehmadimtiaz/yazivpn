@@ -340,10 +340,10 @@ public class MainFragment extends Fragment implements View.OnClickListener, Chan
      * @param byteOut: outgoing data
      */
     public void updateConnectionStatus(String duration, String lastPacketReceive, String byteIn, String byteOut) {
-        binding.durationTv.setText("Duration: " + duration);
-        binding.lastPacketReceiveTv.setText("Packet Received: " + lastPacketReceive + " second ago");
-        binding.byteInTv.setText("Bytes In: " + byteIn);
-        binding.byteOutTv.setText("Bytes Out: " + byteOut);
+//        binding.durationTv.setText("Duration: " + duration);
+//        binding.lastPacketReceiveTv.setText("Packet Received: " + lastPacketReceive + " second ago");
+//        binding.byteInTv.setText("Bytes In: " + byteIn);
+//        binding.byteOutTv.setText("Bytes Out: " + byteOut);
     }
 
     /**
