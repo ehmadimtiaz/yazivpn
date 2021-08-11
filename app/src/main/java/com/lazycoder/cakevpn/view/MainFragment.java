@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Color;
 import android.net.VpnService;
 import android.os.Bundle;
 import android.os.RemoteException;
@@ -246,18 +247,18 @@ public class MainFragment extends Fragment implements View.OnClickListener, Chan
                 status("connect");
                 vpnStart = false;
                 vpnService.setDefaultStatus();
-                binding.logTv.setText("");
+                binding.logTv.setText("Ready");
                 break;
             case "CONNECTED":
                 vpnStart = true;// it will use after restart this activity
                 status("connected");
-                binding.logTv.setText("");
+                binding.logTv.setText("Connected");
                 break;
             case "WAIT":
-                binding.logTv.setText("waiting for server connection!!");
+                binding.logTv.setText("Waiting for Server Connection..");
                 break;
             case "AUTH":
-                binding.logTv.setText("server authenticating!!");
+                binding.logTv.setText("Server Authenticating...");
                 break;
             case "RECONNECTING":
                 status("connecting");
@@ -278,25 +279,35 @@ public class MainFragment extends Fragment implements View.OnClickListener, Chan
 
         if (status.equals("connect")) {
             binding.vpnBtn.setText(getContext().getString(R.string.connect));
+            binding.vpnBtn.setSelected(false);
+            binding.vpnBtn.setTextColor(Color.parseColor("#000000"));
         } else if (status.equals("connecting")) {
             binding.vpnBtn.setText(getContext().getString(R.string.connecting));
+            binding.vpnBtn.setTextSize(22);
+            binding.vpnBtn.setTextColor(Color.parseColor("#000000"));
         } else if (status.equals("connected")) {
 
             binding.vpnBtn.setText(getContext().getString(R.string.disconnect));
-
+            binding.vpnBtn.setSelected(true);
+            binding.vpnBtn.setTextSize(22);
+            binding.vpnBtn.setTextColor(Color.parseColor("#FFFFFF"));
         } else if (status.equals("tryDifferentServer")) {
-
-            binding.vpnBtn.setBackgroundResource(R.drawable.button_connected);
+            binding.vpnBtn.setTextSize(22);
             binding.vpnBtn.setText("Try Different\nServer");
+            binding.vpnBtn.setTextColor(Color.parseColor("#000000"));
         } else if (status.equals("loading")) {
-            binding.vpnBtn.setBackgroundResource(R.drawable.button);
+            binding.vpnBtn.setTextSize(24);
             binding.vpnBtn.setText("Loading Server..");
+            binding.vpnBtn.setTextSize(22);
+            binding.vpnBtn.setTextColor(Color.parseColor("#000000"));
         } else if (status.equals("invalidDevice")) {
-            binding.vpnBtn.setBackgroundResource(R.drawable.button_connected);
             binding.vpnBtn.setText("Invalid Device");
+            binding.vpnBtn.setTextSize(22);
+            binding.vpnBtn.setTextColor(Color.parseColor("#000000"));
         } else if (status.equals("authenticationCheck")) {
-            binding.vpnBtn.setBackgroundResource(R.drawable.button_connecting);
+            binding.vpnBtn.setTextSize(22);
             binding.vpnBtn.setText("Authentication \n Checking...");
+            binding.vpnBtn.setTextColor(Color.parseColor("#000000"));
         }
 
     }

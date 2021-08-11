@@ -9,10 +9,20 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
+import android.text.Html;
+import android.text.Spannable;
+import android.text.TextPaint;
+import android.text.method.LinkMovementMethod;
+import android.text.style.URLSpan;
+import android.text.style.UnderlineSpan;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.lazycoder.cakevpn.R;
 import com.lazycoder.cakevpn.adapter.ServerListRVAdapter;
@@ -21,6 +31,7 @@ import com.lazycoder.cakevpn.interfaces.NavItemClickListener;
 import com.lazycoder.cakevpn.model.Server;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.lazycoder.cakevpn.Utils;
 
@@ -33,6 +44,12 @@ public class MainActivity extends AppCompatActivity implements NavItemClickListe
     private ServerListRVAdapter serverListRVAdapter;
     private DrawerLayout drawer;
     private ChangeServer changeServer;
+
+
+    // Image Slider.
+    private ViewPager2 viewPager2;
+    private Handler sliderHandler = new Handler();
+
 
     public static final String TAG = "YaziVPN";
     @Override
@@ -70,6 +87,45 @@ public class MainActivity extends AppCompatActivity implements NavItemClickListe
             serverListRVAdapter = new ServerListRVAdapter(serverLists, this);
             serverListRv.setAdapter(serverListRVAdapter);
         }
+
+        // Slider.
+        viewPager2 = findViewById(R.id.viewPagerImageSlider);
+
+        List<SliderItem> sliderItems = new ArrayList<>();
+        sliderItems.add(new SliderItem(R.drawable.medtelelogo));
+        sliderItems.add(new SliderItem(R.drawable.theraviserlogo));
+        sliderItems.add(new SliderItem(R.drawable.a1stealthlogo));
+        sliderItems.add(new SliderItem(R.drawable.stupicrichlogo));
+
+
+        viewPager2.setAdapter(new SliderAdapter(sliderItems, viewPager2));
+
+
+        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                sliderHandler.removeCallbacks(sliderRunnable);
+                sliderHandler.postDelayed(sliderRunnable,5000);
+            }
+        });
+
+
+        // Linked Text (Powered by YaziSoft).
+        TextView textView = (TextView) findViewById(R.id.textView);
+        String content = "<a href='https://yazisoft.com/'>Powered by YaziSoft</a>";
+
+        Spannable s = (Spannable) Html.fromHtml(content);
+        for (URLSpan u: s.getSpans(0, s.length(), URLSpan.class)) {
+            s.setSpan(new UnderlineSpan() {
+                public void updateDrawState(TextPaint tp) {
+                    tp.setUnderlineText(false);
+                }
+            }, s.getSpanStart(u), s.getSpanEnd(u), 0);
+        }
+        textView.setText(s);
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
+        textView.setLinkTextColor(Color.parseColor("#FFFFFF"));
 
     }
 
@@ -145,4 +201,26 @@ public class MainActivity extends AppCompatActivity implements NavItemClickListe
         closeDrawer();
         changeServer.newServer(serverLists.get(index));
     }
+
+    // slider more functions.
+    private Runnable sliderRunnable = new Runnable() {
+        @Override
+        public void run() {
+            viewPager2.setCurrentItem(viewPager2.getCurrentItem() + 1);
+        }
+    };
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        sliderHandler.removeCallbacks(sliderRunnable);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        sliderHandler.postDelayed(sliderRunnable, 5000);
+    }
+
+
 }
