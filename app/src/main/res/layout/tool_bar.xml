@@ -2,9 +2,15 @@
 <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/toolbar"
     android:layout_width="match_parent"
-    android:layout_height="?attr/actionBarSize"
-    android:background="@color/navbar">
+    android:background="@color/navbar"
+    android:layout_height="?attr/actionBarSize">
 
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="135dp"
+        android:background="@drawable/logo" />
 
     <ImageButton
         android:layout_gravity="right"
@@ -13,13 +19,5 @@
         android:layout_height="32dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/globesolid" />
-
-    <ImageView
-        android:layout_width="120dp"
-        android:layout_height="55dp"
-        android:layout_marginLeft="135dp"
-        android:background="@drawable/logo"
-
-        />
 
 </androidx.appcompat.widget.Toolbar>

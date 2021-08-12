@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Html;
@@ -36,7 +37,6 @@ import java.util.List;
 import com.lazycoder.cakevpn.Utils;
 
 
-
 public class MainActivity extends AppCompatActivity implements NavItemClickListener {
     private FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
     private Fragment fragment;
@@ -46,39 +46,17 @@ public class MainActivity extends AppCompatActivity implements NavItemClickListe
     private DrawerLayout drawer;
     private ChangeServer changeServer;
 
+
+    // Image Slider.
     private ViewPager2 viewPager2;
     private Handler sliderHandler = new Handler();
 
-    public static final String TAG = "CakeVPN";
+
+    public static final String TAG = "YaziVPN";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-        // image slider.
-        viewPager2 = findViewById(R.id.viewPagerImageSlider);
-
-        List<SliderItem> sliderItems = new ArrayList<>();
-        sliderItems.add(new SliderItem(R.drawable.medtelelogo));
-        sliderItems.add(new SliderItem(R.drawable.theraviserlogo));
-        sliderItems.add(new SliderItem(R.drawable.a1stealthlogo));
-        sliderItems.add(new SliderItem(R.drawable.stupicrichlogo));
-
-
-        viewPager2.setAdapter(new SliderAdapter(sliderItems, viewPager2));
-
-
-        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageSelected(int position) {
-                super.onPageSelected(position);
-                sliderHandler.removeCallbacks(sliderRunnable);
-                sliderHandler.postDelayed(sliderRunnable,5000);
-            }
-        });
-
-
 
         // Initialize all variable
         initializeAll();
@@ -111,6 +89,28 @@ public class MainActivity extends AppCompatActivity implements NavItemClickListe
             serverListRv.setAdapter(serverListRVAdapter);
         }
 
+        // Slider.
+        viewPager2 = findViewById(R.id.viewPagerImageSlider);
+
+        List<SliderItem> sliderItems = new ArrayList<>();
+        sliderItems.add(new SliderItem(R.drawable.medtelelogo));
+        sliderItems.add(new SliderItem(R.drawable.theraviserlogo));
+        sliderItems.add(new SliderItem(R.drawable.a1stealthlogo));
+        sliderItems.add(new SliderItem(R.drawable.stupicrichlogo));
+
+
+        viewPager2.setAdapter(new SliderAdapter(sliderItems, viewPager2));
+
+
+        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                sliderHandler.removeCallbacks(sliderRunnable);
+                sliderHandler.postDelayed(sliderRunnable,5000);
+            }
+        });
+
 
         // Linked Text (Powered by YaziSoft).
         TextView textView = (TextView) findViewById(R.id.textView);
@@ -128,6 +128,8 @@ public class MainActivity extends AppCompatActivity implements NavItemClickListe
         textView.setMovementMethod(LinkMovementMethod.getInstance());
         textView.setLinkTextColor(Color.parseColor("#FFFFFF"));
 
+        // status bar color
+        statusBarColor();
 
     }
 
@@ -165,18 +167,36 @@ public class MainActivity extends AppCompatActivity implements NavItemClickListe
     private ArrayList getServerList() {
 
         ArrayList<Server> servers = new ArrayList<>();
+
+        servers.add(new Server("Japan",
+                Utils.getImgURL(R.drawable.japan),
+                "japan.ovpn",
+                "vpn",
+                "vpn"
+        ));
         servers.add(new Server("United States",
                 Utils.getImgURL(R.drawable.unitedstates),
-                "us_server.ovpn"
+                "us.ovpn",
+                "vpn",
+                "vpn"
         ));
-
-        servers.add(new Server("Germany",
-                Utils.getImgURL(R.drawable.germany),
-                "germany.ovpn"
+        servers.add(new Server("Canada",
+                Utils.getImgURL(R.drawable.canada),
+                "canada.ovpn",
+                "vpn",
+                "vpn"
         ));
-        servers.add(new Server("France",
-                Utils.getImgURL(R.drawable.france),
-                "frans.ovpn"
+        servers.add(new Server("Korea",
+                Utils.getImgURL(R.drawable.southkorea),
+                "korea.ovpn",
+                "vpn",
+                "vpn"
+        ));
+        servers.add(new Server("Taiwan",
+                Utils.getImgURL(R.drawable.taiwan),
+                "taiwan.ovpn",
+                "vpn",
+                "vpn"
         ));
 
         return servers;
@@ -192,6 +212,7 @@ public class MainActivity extends AppCompatActivity implements NavItemClickListe
         changeServer.newServer(serverLists.get(index));
     }
 
+    // slider more functions.
     private Runnable sliderRunnable = new Runnable() {
         @Override
         public void run() {
@@ -209,6 +230,16 @@ public class MainActivity extends AppCompatActivity implements NavItemClickListe
     protected void onResume() {
         super.onResume();
         sliderHandler.postDelayed(sliderRunnable, 5000);
+    }
+
+    // status bar color
+    private void statusBarColor() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            getWindow().setStatusBarColor(getResources().getColor(R.color.statusBar2, this.getTheme()));
+        }
+        else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setStatusBarColor(getResources().getColor(R.color.statusBar2));
+        }
     }
 
 }

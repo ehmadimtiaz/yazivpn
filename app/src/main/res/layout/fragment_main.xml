@@ -8,19 +8,41 @@
         android:paddingRight="10dp"
         android:paddingBottom="5dp">
 
-        <!--        <LinearLayout-->
+        <TextView
+            android:id="@+id/logTv"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="33dp"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:text="@string/ready"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/vpnBtn"
+            android:layout_width="215dp"
+            android:layout_height="215dp"
+            android:layout_below="@+id/logTv"
+            android:layout_marginTop="28dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/buttonbackgroundcolors"
+            android:fontFamily="@font/montserrat"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:text="@string/connect"
+            android:textColor="#121111"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+<!--        <LinearLayout-->
 <!--            android:layout_width="match_parent"-->
 <!--            android:layout_height="wrap_content"-->
-<!--            android:layout_above="@+id/connectionStatus">-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/logTv"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginBottom="20dp"-->
-<!--                android:gravity="center"-->
-<!--                android:textColor="@color/colorWhite" />-->
-<!--        </LinearLayout>-->
+<!--            android:layout_above="@+id/connectionStatus" />-->
 
 <!--        <LinearLayout-->
 <!--            android:layout_marginLeft="20dp"-->
@@ -78,39 +100,13 @@
 
 <!--            -->
 <!--        </LinearLayout>-->
-
-        <TextView
-            android:id="@+id/logTv"
-            android:layout_width="match_parent"
-            android:layout_height="63dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="35dp"
-            android:fontFamily="@font/montserrat"
-            android:gravity="center"
-            android:text="@string/ready"
-            android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/vpnBtn"
-            android:layout_width="215dp"
-            android:layout_height="215dp"
-            android:layout_below="@+id/logTv"
-            android:layout_marginLeft="86dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginRight="86dp"
-            android:background="@drawable/buttonbackgroundcolors"
-            android:fontFamily="@font/montserrat"
-            android:shadowColor="#A8A8A8"
-            android:shadowDx="0"
-            android:shadowDy="0"
-            android:shadowRadius="5"
-            android:text="@string/connect"
-            android:textColor="#121111"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-
+        <ImageView
+            android:id="@+id/selectedServerIcon"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignTop="@+id/vpnBtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="233dp"
+            android:src="@drawable/japan" />
     </RelativeLayout>
 </layout>

@@ -4,8 +4,8 @@
     <color name="colorPrimaryDark">#1d34da</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorWhite">#ffffff</color>
-    <color name="rightNav">#032e63</color>
-    <color name="baseground">#141414</color>
+    <color name="statusBar1">#FFFFFF</color>
+    <color name="statusBar2">#428bca</color>
     <color name="navbar">#FFFFFF</color>
 
 </resources>

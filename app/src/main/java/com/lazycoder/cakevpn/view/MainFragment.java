@@ -73,7 +73,7 @@ public class MainFragment extends Fragment implements View.OnClickListener, Chan
         server = preference.getServer();
 
         // Update current selected server icon
-//        updateCurrentServerIcon(server.getFlagUrl());
+        updateCurrentServerIcon(server.getFlagUrl());
 
         connection = new CheckInternetConnection();
     }
@@ -335,7 +335,7 @@ public class MainFragment extends Fragment implements View.OnClickListener, Chan
                 if (lastPacketReceive == null) lastPacketReceive = "0";
                 if (byteIn == null) byteIn = " ";
                 if (byteOut == null) byteOut = " ";
-//                updateConnectionStatus(duration, lastPacketReceive, byteIn, byteOut);
+                updateConnectionStatus(duration, lastPacketReceive, byteIn, byteOut);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -350,12 +350,12 @@ public class MainFragment extends Fragment implements View.OnClickListener, Chan
      * @param byteIn: incoming data
      * @param byteOut: outgoing data
      */
-//    public void updateConnectionStatus(String duration, String lastPacketReceive, String byteIn, String byteOut) {
+    public void updateConnectionStatus(String duration, String lastPacketReceive, String byteIn, String byteOut) {
 //        binding.durationTv.setText("Duration: " + duration);
 //        binding.lastPacketReceiveTv.setText("Packet Received: " + lastPacketReceive + " second ago");
 //        binding.byteInTv.setText("Bytes In: " + byteIn);
 //        binding.byteOutTv.setText("Bytes Out: " + byteOut);
-//    }
+    }
 
     /**
      * Show toast message
@@ -369,9 +369,11 @@ public class MainFragment extends Fragment implements View.OnClickListener, Chan
      * VPN server country icon change
      * @param serverIcon: icon URL
      */
-//    public void updateCurrentServerIcon(String serverIcon) {
-//        Glide.with(getContext()).load(serverIcon).into(binding.selectedServerIcon);
-//    }
+    public void updateCurrentServerIcon(String serverIcon) {
+        Glide.with(getContext())
+                .load(serverIcon)
+                .into(binding.selectedServerIcon);
+    }
 
     /**
      * Change server when user select new server
@@ -380,7 +382,7 @@ public class MainFragment extends Fragment implements View.OnClickListener, Chan
     @Override
     public void newServer(Server server) {
         this.server = server;
-//        updateCurrentServerIcon(server.getFlagUrl());
+        updateCurrentServerIcon(server.getFlagUrl());
 
         // Stop previous connection
         if (vpnStart) {
