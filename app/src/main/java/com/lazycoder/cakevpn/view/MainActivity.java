@@ -174,8 +174,30 @@ public class MainActivity extends AppCompatActivity implements NavItemClickListe
                 "vpn",
                 "vpn"
         ));
-
-
+        servers.add(new Server("United States",
+                Utils.getImgURL(R.drawable.unitedstates),
+                "us.ovpn",
+                "vpn",
+                "vpn"
+        ));
+        servers.add(new Server("Canada",
+                Utils.getImgURL(R.drawable.canada),
+                "canada.ovpn",
+                "vpn",
+                "vpn"
+        ));
+        servers.add(new Server("Korea",
+                Utils.getImgURL(R.drawable.southkorea),
+                "korea.ovpn",
+                "vpn",
+                "vpn"
+        ));
+        servers.add(new Server("Taiwan",
+                Utils.getImgURL(R.drawable.taiwan),
+                "taiwan.ovpn",
+                "vpn",
+                "vpn"
+        ));
 
         return servers;
     }
