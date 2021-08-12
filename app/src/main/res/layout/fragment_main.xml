@@ -11,9 +11,9 @@
         <TextView
             android:id="@+id/logTv"
             android:layout_width="match_parent"
-            android:layout_height="63dp"
+            android:layout_height="30dp"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="33dp"
             android:fontFamily="@font/montserrat"
             android:gravity="center"
             android:text="@string/ready"
@@ -26,9 +26,8 @@
             android:layout_width="215dp"
             android:layout_height="215dp"
             android:layout_below="@+id/logTv"
-            android:layout_marginLeft="86dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginRight="86dp"
+            android:layout_marginTop="28dp"
+            android:layout_centerHorizontal="true"
             android:background="@drawable/buttonbackgroundcolors"
             android:fontFamily="@font/montserrat"
             android:shadowColor="#A8A8A8"
@@ -107,7 +106,7 @@
             android:layout_height="55dp"
             android:layout_alignTop="@+id/vpnBtn"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/usa_flag" />
+            android:layout_marginTop="233dp"
+            android:src="@drawable/japan" />
     </RelativeLayout>
 </layout>
