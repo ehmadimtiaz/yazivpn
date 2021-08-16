@@ -111,11 +111,11 @@ de/blinkt/openvpn/core/TrafficHistory.java
  de.blinkt.openvpn.core.TrafficHistory$TrafficDatapoint$1
 org/spongycastle/util/encoders/Encoder.java
  org.spongycastle.util.encoders.Encoder
+de/blinkt/openvpn/OnBootReceiver.java
+ de.blinkt.openvpn.OnBootReceiver
 de/blinkt/openvpn/DisconnectVPNActivity.java
  de.blinkt.openvpn.DisconnectVPNActivity
  de.blinkt.openvpn.DisconnectVPNActivity$1
-de/blinkt/openvpn/OnBootReceiver.java
- de.blinkt.openvpn.OnBootReceiver
 de/blinkt/openvpn/core/OpenVPNStatusService.java
  de.blinkt.openvpn.core.OpenVPNStatusService
  de.blinkt.openvpn.core.OpenVPNStatusService$1
@@ -153,10 +153,6 @@ de/blinkt/openvpn/BuildConfig.java
 de/blinkt/openvpn/api/AppRestrictions.java
  de.blinkt.openvpn.api.AppRestrictions
  de.blinkt.openvpn.api.AppRestrictions$1
-de/blinkt/openvpn/VpnProfile.java
- de.blinkt.openvpn.VpnProfile
- de.blinkt.openvpn.VpnProfile$1
- de.blinkt.openvpn.VpnProfile$NoCertReturnedException
 de/blinkt/openvpn/core/ExtAuthHelper.java
  de.blinkt.openvpn.core.ExtAuthHelper
  de.blinkt.openvpn.core.ExtAuthHelper$1
@@ -166,11 +162,17 @@ de/blinkt/openvpn/core/OrbotHelper.java
  de.blinkt.openvpn.core.OrbotHelper
  de.blinkt.openvpn.core.OrbotHelper$1
  de.blinkt.openvpn.core.OrbotHelper$StatusCallback
+de/blinkt/openvpn/VpnProfile.java
+ de.blinkt.openvpn.VpnProfile
+ de.blinkt.openvpn.VpnProfile$1
+ de.blinkt.openvpn.VpnProfile$NoCertReturnedException
 de/blinkt/openvpn/core/IOpenVPNServiceInternal.java
  de.blinkt.openvpn.core.IOpenVPNServiceInternal
  de.blinkt.openvpn.core.IOpenVPNServiceInternal$Default
  de.blinkt.openvpn.core.IOpenVPNServiceInternal$Stub
  de.blinkt.openvpn.core.IOpenVPNServiceInternal$Stub$Proxy
+de/blinkt/openvpn/FileProvider.java
+ de.blinkt.openvpn.FileProvider
 de/blinkt/openvpn/core/VpnStatus.java
  de.blinkt.openvpn.core.VpnStatus
  de.blinkt.openvpn.core.VpnStatus$1
@@ -178,17 +180,15 @@ de/blinkt/openvpn/core/VpnStatus.java
  de.blinkt.openvpn.core.VpnStatus$LogLevel
  de.blinkt.openvpn.core.VpnStatus$LogListener
  de.blinkt.openvpn.core.VpnStatus$StateListener
-de/blinkt/openvpn/FileProvider.java
- de.blinkt.openvpn.FileProvider
 de/blinkt/openvpn/core/NetworkUtils.java
  de.blinkt.openvpn.core.NetworkUtils
+de/blinkt/openvpn/core/VPNLaunchHelper.java
+ de.blinkt.openvpn.core.VPNLaunchHelper
 de/blinkt/openvpn/core/DeviceStateReceiver.java
  de.blinkt.openvpn.core.DeviceStateReceiver
  de.blinkt.openvpn.core.DeviceStateReceiver$1
  de.blinkt.openvpn.core.DeviceStateReceiver$Datapoint
  de.blinkt.openvpn.core.DeviceStateReceiver$connectState
-de/blinkt/openvpn/core/VPNLaunchHelper.java
- de.blinkt.openvpn.core.VPNLaunchHelper
 org/spongycastle/util/io/pem/PemObjectGenerator.java
  org.spongycastle.util.io.pem.PemObjectGenerator
 de/blinkt/openvpn/api/IOpenVPNAPIService.java
