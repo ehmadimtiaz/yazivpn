@@ -1,4 +1,4 @@
-package com.lazycoder.cakevpn;
+package com.yazisoft.yazivpn;
 
 import android.net.Uri;
 

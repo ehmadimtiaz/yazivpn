@@ -1,4 +1,4 @@
-package com.lazycoder.cakevpn.model;
+package com.yazisoft.yazivpn.model;
 
 public class Server {
     private String country;
