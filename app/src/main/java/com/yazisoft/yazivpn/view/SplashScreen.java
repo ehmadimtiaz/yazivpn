@@ -1,4 +1,4 @@
-package com.lazycoder.cakevpn.view;
+package com.yazisoft.yazivpn.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.lazycoder.cakevpn.R;
+import com.yazisoft.yazivpn.R;
 
 public class SplashScreen extends AppCompatActivity {
 

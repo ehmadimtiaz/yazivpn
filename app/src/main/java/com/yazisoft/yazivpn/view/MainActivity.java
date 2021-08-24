@@ -1,4 +1,4 @@
-package com.lazycoder.cakevpn.view;
+package com.yazisoft.yazivpn.view;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -25,16 +26,16 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.lazycoder.cakevpn.R;
-import com.lazycoder.cakevpn.adapter.ServerListRVAdapter;
-import com.lazycoder.cakevpn.interfaces.ChangeServer;
-import com.lazycoder.cakevpn.interfaces.NavItemClickListener;
-import com.lazycoder.cakevpn.model.Server;
+import com.yazisoft.yazivpn.R;
+import com.yazisoft.yazivpn.adapter.ServerListRVAdapter;
+import com.yazisoft.yazivpn.interfaces.ChangeServer;
+import com.yazisoft.yazivpn.interfaces.NavItemClickListener;
+import com.yazisoft.yazivpn.model.Server;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.lazycoder.cakevpn.Utils;
+import com.yazisoft.yazivpn.Utils;
 
 
 public class MainActivity extends AppCompatActivity implements NavItemClickListener {
@@ -130,6 +131,9 @@ public class MainActivity extends AppCompatActivity implements NavItemClickListe
 
         // status bar color
         statusBarColor();
+
+        // orientation lock
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
     }
 

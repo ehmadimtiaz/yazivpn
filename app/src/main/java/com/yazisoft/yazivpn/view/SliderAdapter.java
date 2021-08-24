@@ -1,4 +1,4 @@
-package com.lazycoder.cakevpn.view;
+package com.yazisoft.yazivpn.view;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.lazycoder.cakevpn.R;
+import com.yazisoft.yazivpn.R;
 import com.makeramen.roundedimageview.RoundedImageView;
 
 import java.util.List;

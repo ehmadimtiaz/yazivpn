@@ -1,11 +1,11 @@
-package com.lazycoder.cakevpn;
+package com.yazisoft.yazivpn;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.lazycoder.cakevpn.model.Server;
+import com.yazisoft.yazivpn.model.Server;
 
-import static com.lazycoder.cakevpn.Utils.getImgURL;
+import static com.yazisoft.yazivpn.Utils.getImgURL;
 
 public class SharedPreference {
 

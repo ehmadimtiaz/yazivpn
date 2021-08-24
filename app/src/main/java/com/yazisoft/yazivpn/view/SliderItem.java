@@ -1,4 +1,4 @@
-package com.lazycoder.cakevpn.view;
+package com.yazisoft.yazivpn.view;
 
 public class SliderItem {
     private int image;

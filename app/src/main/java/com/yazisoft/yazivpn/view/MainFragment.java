@@ -1,4 +1,4 @@
-package com.lazycoder.cakevpn.view;
+package com.yazisoft.yazivpn.view;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -22,12 +22,12 @@ import androidx.fragment.app.Fragment;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.bumptech.glide.Glide;
-import com.lazycoder.cakevpn.CheckInternetConnection;
-import com.lazycoder.cakevpn.R;
-import com.lazycoder.cakevpn.SharedPreference;
-import com.lazycoder.cakevpn.databinding.FragmentMainBinding;
-import com.lazycoder.cakevpn.interfaces.ChangeServer;
-import com.lazycoder.cakevpn.model.Server;
+import com.yazisoft.yazivpn.CheckInternetConnection;
+import com.yazisoft.yazivpn.R;
+import com.yazisoft.yazivpn.SharedPreference;
+import com.yazisoft.yazivpn.databinding.FragmentMainBinding;
+import com.yazisoft.yazivpn.interfaces.ChangeServer;
+import com.yazisoft.yazivpn.model.Server;
 
 import java.io.BufferedReader;
 import java.io.IOException;
